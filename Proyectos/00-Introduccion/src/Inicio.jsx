@@ -1,16 +1,37 @@
+import DarkLightMode from './DarkLightMode';
 import './Inicio.css';
-import Buscador from './components/Buscador';
+// import Buscador from './components/Buscador';
 import Contador from './components/Contador';
-import RegistrarFormulario from './components/RegistrarFormulario';
+import ContadorDoble from './components/ContadorDoble';
+import ContadorDobleBest from './components/ContadorDobleBest';
+import TodoListBasicTailwindcss from './components/TodoListBasicTailwindcss';
+// import RegistrarFormulario from './components/RegistrarFormulario';
+import TodoListVeryBasic from './components/TodoListVeryBasic';
 
 const Inicio = () => {
   return (
     <>
-    <Contador />
     
-    <RegistrarFormulario/>
+    <Contador />
+    <hr />
 
-    <Buscador/>
+    <ContadorDoble/>
+    <hr />
+
+    <ContadorDobleBest/>
+    <hr />
+
+    <DarkLightMode/>
+    <hr />
+
+    <TodoListVeryBasic/>
+    <hr />
+
+    <TodoListBasicTailwindcss/>
+    
+    {/* <RegistrarFormulario/> */}
+
+    {/* <Buscador/> */}
 
     </>
   )

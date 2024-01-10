@@ -1,5 +1,6 @@
 
 export const Basico = () => {
+    // declaracion de los hooks
 
     // variables locales
     const nombre = "Rubén ";
@@ -7,8 +8,6 @@ export const Basico = () => {
     const miArray = ['chapa','cuello','culo'];
     const miObjeto = {nombre: 'Juan', edad: 25};
     const elementoJSX = <p>El mundo es maravilloso</p> ;
-
-    // declaracion de los hooks
 
     // funciones
     const sumar = (a,b) => {

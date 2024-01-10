@@ -1,5 +1,5 @@
 // imports
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Buscador.css';
 
 // globals
@@ -21,11 +21,11 @@ const Buscador = () => {
       ul los elementos del initialstate
       cada vez que escriba en el formulario realizaremos la busqueda
     */
+// hooks
+
 // vars
     const [searchItem, setSearchItem] = useState("");
     const [filterItems, setfilterItems] = useState(initialState);
-
-// hooks
 
 // functs
 
@@ -57,7 +57,7 @@ const Buscador = () => {
     <>
       <ul>
         {filterItems.map((element,key) => (
-          <li key={key} style={{ backgroundColor: stringToRGB(element)}}>{element}</li>
+          <li key={key} style={{ backgroundColor: stringToRGB(element) }}>{element}</li>
         )
         )}
       </ul>
