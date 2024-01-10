@@ -13,6 +13,8 @@ const RegistrarFormulario = () => {
   const [formData, setFormData] = useState(initialState);
 
   //hooks
+
+  // functs
   function handleSubmit(event) {
     event.preventDefault();
     console.log("Los datos del usuario son: ",formData);
@@ -25,7 +27,6 @@ const RegistrarFormulario = () => {
     setFormData({...formData,[name]:value});
   }
 
-  // functs
 
   return (
     <form onSubmit={handleSubmit}>
