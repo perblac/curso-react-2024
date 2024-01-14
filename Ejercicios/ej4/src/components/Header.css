@@ -1,0 +1,14 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color:;
+    background: linear-gradient(to bottom, darkblue, navy);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px .5rem black;
+}

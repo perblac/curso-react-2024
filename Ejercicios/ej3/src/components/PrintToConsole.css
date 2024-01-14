@@ -1,0 +1,17 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 66%;
+    height: 6rem;
+    background-color: #153012;
+    color: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border: .1rem solid greenyellow;
+    border-radius: 2rem;
+    filter: blur(1px);
+    box-shadow: 1px 1px 2rem .5rem darkgreen inset;
+}
