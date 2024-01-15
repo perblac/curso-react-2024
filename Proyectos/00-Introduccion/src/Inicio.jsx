@@ -1,17 +1,21 @@
-import DarkLightMode from './DarkLightMode';
+// import DarkLightMode from './components/useState/DarkLightMode';
 import './Inicio.css';
-// import Buscador from './components/Buscador';
-import Contador from './components/Contador';
-import ContadorDoble from './components/ContadorDoble';
-import ContadorDobleBest from './components/ContadorDobleBest';
-import TodoListBasicTailwindcss from './components/TodoListBasicTailwindcss';
-// import RegistrarFormulario from './components/RegistrarFormulario';
-import TodoListVeryBasic from './components/TodoListVeryBasic';
+import ResizeListener from './components/useEffect/ResizeListener';
+import UseEffectBasic from './components/useEffect/UseEffectBasic';
+// import Buscador from './components/useState/Buscador';
+// import Contador from './components/useState/Contador';
+// import ContadorDoble from './components/useState/ContadorDoble';
+// import ContadorDobleBest from './components/useState/ContadorDobleBest';
+// import TodoListBasicTailwindcss from './components/useState/TodoListBasicTailwindcss';
+// import RegistrarFormulario from './components/useState/RegistrarFormulario';
+// import TodoListVeryBasic from './components/useState/TodoListVeryBasic';
+// import ComponentProps from './components/props/ComponentProps';
+// import PadreHijoNieto from './components/props/PadreHijoNieto';
 
 const Inicio = () => {
   return (
     <>
-    
+{/*     
     <Contador />
     <hr />
 
@@ -28,11 +32,25 @@ const Inicio = () => {
     <hr />
 
     <TodoListBasicTailwindcss/>
-    
+    <hr />
+     */}
+
     {/* <RegistrarFormulario/> */}
 
     {/* <Buscador/> */}
 
+    {/* <ComponentProps />
+    <hr /> */}
+
+    {/* <PadreHijoNieto />
+    <hr /> */}
+
+    {/* <UseEffectBasic />
+    <hr /> */}
+
+    <ResizeListener/>
+    <hr />
+    
     </>
   )
 }

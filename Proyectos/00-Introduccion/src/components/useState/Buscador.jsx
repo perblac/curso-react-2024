@@ -22,10 +22,10 @@ const Buscador = () => {
       cada vez que escriba en el formulario realizaremos la busqueda
     */
 // hooks
+const [searchItem, setSearchItem] = useState("");
+const [filterItems, setfilterItems] = useState(initialState);
 
 // vars
-    const [searchItem, setSearchItem] = useState("");
-    const [filterItems, setfilterItems] = useState(initialState);
 
 // functs
 

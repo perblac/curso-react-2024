@@ -1,6 +1,6 @@
 //import
 import { useState } from "react";
-import { generateId } from "../helpers/generateId";
+import { generateId } from "../../helpers/generateId";
 
 //globals
 /*
@@ -25,10 +25,10 @@ const initialState = [
 
 const TodoListBasicTailwindcss = () => {
   //hook
-  //vars
   // const [tasks, setTasks] = useState(initialState);
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+  //vars
 
   //functs
   function handleKeyDown(event) {
@@ -38,24 +38,24 @@ const TodoListBasicTailwindcss = () => {
   }
 
   function handleCompletion(taskId) {
-    const updateTask = tasks.map((task) =>
-      task.id === taskId ? { ...task, completed: !task.completed } : task,
+    const updatedTasks = tasks.map((task) =>
+      task.id === taskId ? { ...task, completed: !task.completed } : task
     );
-    setTasks(updateTask);
+    setTasks(updatedTasks);
   }
 
   function handleRemoveTask(taskId) {
-    const newTasksList = tasks.filter((task) => task.id != taskId);
+    const newTasksList = tasks.filter(task => task.id !== taskId);
     setTasks(newTasksList);
   }
 
   function handleAddTask() {
-    if (newTask) {
+    if (newTask.trim()) {
       const taskToAdd = {};
       taskToAdd.completed = false;
-      taskToAdd.title = newTask;
+      taskToAdd.title = newTask.trim();
       taskToAdd.id = generateId();
-      const newTasksList = tasks;
+      const newTasksList = [...tasks];
       newTasksList.push(taskToAdd);
       setTasks(newTasksList);
       setNewTask("");
@@ -64,7 +64,7 @@ const TodoListBasicTailwindcss = () => {
 
   return (
     <>
-      <div className="max-w-md mx-auto mt-8 p-6 bg-slate-100 shadow-md rounded-md">
+      <div className="max-w-md mx-auto mt-8 p-6 bg-slate-300 shadow-md rounded-md">
         <h1 className=" text-2xl mb-4 font-bold">
           Lista de Tareas (Basic Tailwind)
         </h1>

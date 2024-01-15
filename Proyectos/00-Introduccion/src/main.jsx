@@ -5,8 +5,8 @@ import Inicio from './Inicio'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.Fragment>
     {/* <App /> */}
     <Inicio /> 
-  </React.StrictMode>,
+  </React.Fragment>,
 )

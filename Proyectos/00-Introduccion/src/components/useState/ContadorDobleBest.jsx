@@ -11,8 +11,8 @@ const initialState = {
 
 const ContadorDoble = () => {
     // hook
-    // var
     const [friends, setFriends] = useState(initialState);
+    // var
     // funct
     function handleIncrementFriend(friendName) {
         // incrementa en 1 el número de amigos de Isaías

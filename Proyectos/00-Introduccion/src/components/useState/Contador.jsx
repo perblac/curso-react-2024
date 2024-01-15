@@ -5,9 +5,9 @@ import { useState } from "react";
 // variables globales
 
 const Contador = () => {
-    // vars
-    const [counter, setCounter] = useState(0)
     // hooks
+    const [counter, setCounter] = useState(0)
+    // vars
     // functs
     function handleIncrementCounter(value = 1) {
         setCounter((previousValue) => previousValue + value);

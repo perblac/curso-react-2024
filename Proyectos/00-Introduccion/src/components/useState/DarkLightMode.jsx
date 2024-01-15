@@ -6,8 +6,8 @@ import "./DarkLightMode.css";
 
 const DarkLightMode = () => {
   //hook
-  //vars
   const [darkMode, setDarkMode] = useState(false);
+  //vars
 
   //funct
   function handleToggleTheme() {

@@ -22,8 +22,8 @@ const initialState = [
 
 const TodoListVeryBasic = () => {
   //hook
-  //vars
   const [tasks, setTasks] = useState(initialState);
+  //vars
 
   //functs
   function handleCompletion(taskId) {

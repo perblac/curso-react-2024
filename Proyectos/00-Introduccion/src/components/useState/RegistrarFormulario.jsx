@@ -1,5 +1,5 @@
 // imports
-import React, { useState } from "react";
+import { useState } from "react";
 
 // globals
 const initialState = {
@@ -9,10 +9,10 @@ const initialState = {
 };
 
 const RegistrarFormulario = () => {
-  //vars
-  const [formData, setFormData] = useState(initialState);
-
   //hooks
+  const [formData, setFormData] = useState(initialState);
+  
+  //vars
 
   // functs
   function handleSubmit(event) {
