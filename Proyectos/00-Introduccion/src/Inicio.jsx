@@ -1,7 +1,8 @@
 // import DarkLightMode from './components/useState/DarkLightMode';
 import './Inicio.css';
-import ResizeListener from './components/useEffect/ResizeListener';
-import UseEffectBasic from './components/useEffect/UseEffectBasic';
+import GitHubUserCard from './components/useEffect/GitHubUserCard/GitHubUserCard';
+// import ResizeListener from './components/useEffect/ResizeListener';
+// import UseEffectBasic from './components/useEffect/UseEffectBasic';
 // import Buscador from './components/useState/Buscador';
 // import Contador from './components/useState/Contador';
 // import ContadorDoble from './components/useState/ContadorDoble';
@@ -48,7 +49,10 @@ const Inicio = () => {
     {/* <UseEffectBasic />
     <hr /> */}
 
-    <ResizeListener/>
+    {/* <ResizeListener/>
+    <hr /> */}
+
+    <GitHubUserCard/>
     <hr />
     
     </>
