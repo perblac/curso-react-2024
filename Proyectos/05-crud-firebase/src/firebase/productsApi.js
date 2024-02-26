@@ -7,7 +7,7 @@ import {
   getDocs,
   updateDoc,
 } from "firebase/firestore";
-import {GoogleAuthProvider, browserSessionPersistence, getAuth, setPersistence, signInWithPopup} from 'firebase/auth';
+import {GoogleAuthProvider, browserSessionPersistence, getAuth, setPersistence, signInWithPopup, signOut} from 'firebase/auth';
 import { db } from "./firebase";
 
 const productosCollection = collection(db, "crud-productos");
@@ -83,7 +83,7 @@ export const deleteProducto = async (id) => {
 };
 
 // validar la entrada con Google
-export const signInWithGoogle = async (setEstadoGlobal, setError, navigate) => {
+export const signInWithGoogle = async (signInFirebase, setError, navigate) => {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   try {
@@ -96,8 +96,7 @@ export const signInWithGoogle = async (setEstadoGlobal, setError, navigate) => {
     const result = await signInWithPopup(auth,provider);
     const user = result.user;
     // setear mi estado con el usuario
-    setEstadoGlobal(user);
-    console.log(user);
+    signInFirebase(user);
     navigate("/");
   } catch (error) {
     setError("Error al iniciar sesion con Google");
@@ -105,3 +104,13 @@ export const signInWithGoogle = async (setEstadoGlobal, setError, navigate) => {
 };
 
 // cerrar sesion
+export const cerrarSesion = async () => {
+  const auth = getAuth();
+  try {
+    await signOut(auth);
+    return true;
+  } catch (error) {
+    console.log("Error al iniciar sesion con Google", error);
+    return false;
+  }
+}

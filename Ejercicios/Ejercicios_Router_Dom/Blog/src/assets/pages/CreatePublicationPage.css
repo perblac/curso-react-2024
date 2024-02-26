@@ -1,0 +1,71 @@
+.container {
+  background-color: lightblue;
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.formulario {
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: lightseagreen;
+  filter: drop-shadow(2px 2px 5px black);
+  margin: 2rem;
+  padding: 2rem;
+  width: 75vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+label,
+input {
+  padding: 1rem;
+  margin: 1rem 2rem;
+}
+
+input {
+  width: 75%;
+}
+
+.titulo {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.texto {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#texto {
+  padding: 1rem;
+  margin: 1rem 2rem;
+}
+
+.publicar {
+  width: fit-content;
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(26, 139, 134);
+  color: white;
+  margin: auto;
+  transition: background-color 0.5s;
+}
+.publicar:hover {
+  background-color:  rgb(21, 113, 108);
+  transition: background-color 0.5s;
+}

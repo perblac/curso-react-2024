@@ -2,18 +2,20 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithGoogle } from "../firebase/productsApi";
 import AuthContext from "../components/context/AuthContext";
+import { useAuthContext } from "../components/context/useAuthContext";
 
 const LoginPage = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   // estado global
-  const { setEstadoGlobal } = useContext(AuthContext);
+  // const { setEstadoGlobal } = useContext(AuthContext);
+  const { userFirebase, signInFirebase } = useAuthContext();
 
   // llamar a una funcion de productaApi para gestionar el inicio de sesion con Google
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      await signInWithGoogle(setEstadoGlobal, setError, navigate);
+      await signInWithGoogle(signInFirebase, setError, navigate);
     } catch (error) {
       console.error(error);
     }

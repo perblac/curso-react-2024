@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 const RootPage = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <Outlet />
       <Footer />
     </>

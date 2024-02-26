@@ -1,0 +1,46 @@
+.header {
+    background-color: lightseagreen;
+    color: darkslategray;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.title {
+    display: inline-block;
+    margin: 2rem;
+    margin-right: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 1rem 2rem;
+}
+
+li {
+    background-color: lightseagreen;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    border-bottom: 1px solid aquamarine;
+    transition: background-color .5s;
+}
+
+li:hover {
+    background-color: aquamarine;
+    transition: background-color .5s;
+}
+
+a {
+    text-decoration: none;
+    color: darkslategray;
+}

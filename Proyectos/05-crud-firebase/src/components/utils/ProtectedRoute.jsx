@@ -1,12 +1,11 @@
-import { useContext } from 'react';
 import { Navigate, Outlet } from 'react-router-dom'
-import AuthContext from '../context/AuthContext';
+import { useAuthContext } from '../context/useAuthContext';
 
 const ProtectedRoute = ({redirectPath}) => {
     // cargamos el estado global
-    const {estadoGlobal} = useContext(AuthContext);
+    const { userFirebase } = useAuthContext();
     
-    const isActive = !!estadoGlobal;
+    const isActive = !!userFirebase;
 
     if(!isActive) {
         return <Navigate to={redirectPath} replace />;

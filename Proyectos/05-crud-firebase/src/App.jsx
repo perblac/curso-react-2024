@@ -6,7 +6,8 @@ import ErrorPage from "./pages/ErrorPage";
 import LoginPage from "./pages/LoginPage";
 import RootPage from "./pages/RootPage";
 import ProtectedRoute from "./components/utils/ProtectedRoute";
-import AuthProvider from "./components/context/AuthProvider";
+import { AuthProvider } from "./components/context/useAuthContext";
+import PayPage from "./pages/PayPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,7 +17,6 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         {
-          // element: <ProtectedRoute isActive={false} redirectPath="/login" />,
           element: <ProtectedRoute redirectPath="/login" />,
           children: [
             {
@@ -26,6 +26,11 @@ function App() {
             {
               path: "/products/:idproduct",
               element: <EditProductPage />,
+            },
+            {
+              // path: "/pay/:total",
+              path: "/pay",
+              element: <PayPage />,
             },
             {
               path: "/payment",
@@ -44,7 +49,7 @@ function App() {
     // añadir context estadoGlobal
     <AuthProvider>
       <RouterProvider router={router} />
-    </AuthProvider>
+      </AuthProvider>
   );
 }
 

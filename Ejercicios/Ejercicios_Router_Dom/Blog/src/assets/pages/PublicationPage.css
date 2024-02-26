@@ -1,0 +1,53 @@
+.post {
+  padding: 2rem;
+  margin: 1rem;
+  width: 50vw;
+  background-color: azure;
+  filter: drop-shadow(2px 2px 5px black);
+  transition: filter 0.5s;
+}
+.post:hover {
+  filter: drop-shadow(2px 2px 10px black);
+  transition: filter 1s;
+}
+
+h3 {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.cuerpo {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.textopost {
+  width: 100%;
+  text-align: left;
+  text-indent: 2rem;
+  font-size: 1.2rem;
+}
+
+.boton {
+  width: 100%;
+}
+
+.eliminar,
+.volver {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: lightseagreen;
+  color: white;
+  margin: auto;
+  transition: background-color 0.5s;
+}
+
+.eliminar:hover,
+.volver:hover {
+  background-color: seagreen;
+  transition: background-color 0.5s;
+}
